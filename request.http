@@ -2,8 +2,8 @@
 POST http://localhost:8000/api/register/
 Content-Type: "application/json"
 
-{    
-    "name": "por",
-    "email": "sd", 
-    "password": "12309"
+{
+    "name": "",
+    "email": "",
+    "password": ""
 }

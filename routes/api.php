@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Route;
 use  App\Models\User;
+use App\Http\Controllers\AuthController;
 
 
 Route::get( '/user', function (Request $request) {
@@ -11,13 +12,6 @@ Route::get( '/user', function (Request $request) {
 //salvar no db "post" server para pegar algo do db ou por lá
 
 
-Route::post( '/register', function(Request $request) {
-$user = new User();
-$user->name=$request->name;
-$user->email=$request->email;
-$user->password=$request->password;
-
-return response ()->json ([
-        "user" => $user
-    ]);
-    });
+Route::post( '/register', [AuthController::class , 'store']);
+/*Route::post( '/login', AuthController::class . '@login');
+Route::get( '/user', AuthController::class . '@user');*/
