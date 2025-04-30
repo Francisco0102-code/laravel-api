@@ -6,9 +6,7 @@ use  App\Models\User;
 use App\Http\Controllers\AuthController;
 
 
-Route::get( '/user', function (Request $request) {
-    return response ()->json(['message' => 'A vontade de parar e grande mas  nao posso']);
-});
+Route::get( '/user', [AuthController::class , 'user']);
 //salvar no db "post" server para pegar algo do db ou por lá
 
 

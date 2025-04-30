@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function vehicls():HasOne
+    {
+        return $this->hasOne(Vehicl::class);
+    }
+ 
 }

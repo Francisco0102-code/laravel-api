@@ -3,7 +3,15 @@ POST http://localhost:8000/api/register/
 Content-Type: "application/json"
 
 {
-    "name": "rai",
-    "email": "raiii@gmail.com",
-    "password": "122"
+    "name": "Rai56",
+    "email": "rai56@lkasjdkl",
+    "telephone": "8978546549",
+    "type": "driver",
+    "password": "klçjlkjlk",
+    "carbrand": "çljklçj",
+    "carmodel": "lkjlk",
+    "caryear": "698577",
+    "carplate": "hkj68786"
 }
+
+
