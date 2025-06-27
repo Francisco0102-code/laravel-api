@@ -1,6 +1,6 @@
-###Router de cadastro
-POST http://localhost:8000/api/register/
-Content-Type: "application/json"
+### Rota de cadastro de usuário
+POST http://localhost:8000/api/register
+Content-Type: application/json
 
 {
     "name": "Rai56",
@@ -14,8 +14,32 @@ Content-Type: "application/json"
     "carplate": "hkj68786"
 }
 
-### Listar usuários
-GET http://localhost:8000/api/users/
+### Listar todas as caronas
+GET http://localhost:8000/api/caronas
 
-### Listar usuário
-GET http://localhost:8000/api/users/2
+### Mostrar uma carona específica
+GET http://localhost:8000/api/caronas/1
+
+### Criar uma nova carona
+POST http://localhost:8000/api/caronas
+Content-Type: application/json
+
+{
+    "origin": "Rua A, 123",
+    "destination": "Avenida B, 456",
+    "date": "2023-10-01",
+    "time": "08:00:00",
+    "available_seats": 3,
+    "driver_id": 1
+}
+
+### Atualizar uma carona
+PUT http://localhost:8000/api/caronas/1
+Content-Type: application/json
+
+{
+    "available_seats": 2
+}
+
+### Deletar uma carona
+DELETE http://localhost:8000/api/caronas/1
